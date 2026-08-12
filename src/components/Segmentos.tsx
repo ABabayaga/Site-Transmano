@@ -9,7 +9,7 @@ function Icon({ id, className = '' }: { id: string; className?: string }) {
 const segmentos = [
   {
     tag: 'Setor alimentício',
-    image: 'https://source.unsplash.com/800x600/?warehouse,logistics',
+    image: '/segali.jpg',
     title: 'Transporte de alimentos',
     description:
       'No abastecimento, o relógio não para: janela de recebimento fechada, CD sem espaço amanhã, promotor esperando na loja. Nossa operação já nasce nesse ritmo.',
@@ -24,7 +24,7 @@ const segmentos = [
   },
   {
     tag: 'Placas solares',
-    image: 'https://source.unsplash.com/800x600/?solar,panels',
+    image: 'segsol.jpg',
     title: 'Painéis fotovoltaicos',
     description:
       'Painel solar não é carga comum. A avaria nem sempre aparece na entrega — muitas vezes só aparece depois, com os módulos já instalados e gerando abaixo do esperado. Aí a conta chega dobrada.',
@@ -47,7 +47,11 @@ export default function Segmentos() {
     >
       <div className="mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
         <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
-          <span className="h-[2px] w-6 bg-[#e11d2e]" aria-hidden="true" />
+          <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
+          <span className="h-[2px] bg-[#e11d2e]" />
+          <span className="h-0 border-t-2 border-dashed border-[#e11d2e]" />
+          <span className="h-[2px] bg-[#e11d2e]" />
+        </span>
           Segmentos especializados
         </span>
 

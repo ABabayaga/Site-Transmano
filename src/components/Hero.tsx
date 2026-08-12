@@ -1,9 +1,3 @@
-const stats = [
-  { value: '+12', label: 'estados atendidos' },
-  { value: '40', label: 'veículos próprios' },
-  { value: '24h', label: 'monitoramento' },
-  { value: '100%', label: 'carga assegurada' },
-]
 
 const trackingTabs = ['Remetente', 'Destinatário', 'Pagador']
 
@@ -37,7 +31,7 @@ export default function Hero() {
             20 anos movendo o Centro-Oeste
           </span>
 
-          <h1 className="mt-6 text-[64px] leading-[0.98] font-extrabold tracking-[-1.5px] text-[var(--text-h)] uppercase max-[860px]:text-[38px]">
+          <h1 className="mt-6 font-['Archivo_Black'] text-[64px] leading-[0.98] font-normal tracking-[-1.5px] text-[var(--text-h)] uppercase max-[860px]:text-[38px]">
             Sua carga com <span className="text-[#e11d2e]">previsibilidade,</span> não com sorte.
           </h1>
 
@@ -62,37 +56,29 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 grid grid-cols-4 gap-6 border-t border-[var(--border)] pt-8 max-[640px]:grid-cols-2">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-[30px] font-extrabold text-[var(--text-h)]">{stat.value}</div>
-                <div className="text-[13px] text-[var(--text)]">{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Mockup only — will be wired to the SSW tracking API */}
         <div className="relative w-full max-w-[420px] justify-self-end overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] max-[1080px]:justify-self-start">
-          <div className="flex items-center gap-4 bg-[#131313] px-7 py-6">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e11d2e]">
-              <Icon id="search-icon" className="h-5 w-5 text-white" />
+          <div className="flex items-center gap-3 bg-[#131313] px-6 py-4">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e11d2e]">
+              <Icon id="search-icon" className="h-4 w-4 text-white" />
             </span>
             <div>
-              <div className="text-[15px] font-bold tracking-[0.3px] text-white uppercase">
+              <div className="text-[14px] font-bold tracking-[0.3px] text-white uppercase">
                 Rastreie sua carga
               </div>
-              <div className="mt-0.5 text-[12.5px] text-white/60">
+              <div className="mt-0.5 text-[12px] text-white/60">
                 Acompanhamento em tempo real · integração SSW
               </div>
             </div>
           </div>
 
-          <div className="px-7 pt-6">
-            <div className="flex flex-wrap items-center gap-1 rounded-full bg-[#f4f3ec] p-1 text-[11.5px] font-bold tracking-[0.2px] uppercase">
+          <div className="px-6 pt-4">
+            <div className="flex flex-wrap items-center gap-1 rounded-full bg-[#f4f3ec] p-1 text-[11px] font-bold tracking-[0.2px] uppercase">
               <button
                 type="button"
-                className="rounded-full bg-white px-3.5 py-2.5 text-[var(--text-h)] shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
+                className="rounded-full bg-white px-3 py-2 text-[var(--text-h)] shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
               >
                 Por NFs
               </button>
@@ -100,7 +86,7 @@ export default function Hero() {
                 <button
                   key={tab}
                   type="button"
-                  className="rounded-full px-3.5 py-2.5 text-[var(--text)] transition-colors hover:text-[var(--text-h)]"
+                  className="rounded-full px-3 py-2 text-[var(--text)] transition-colors hover:text-[var(--text-h)]"
                 >
                   {tab}
                 </button>
@@ -108,35 +94,35 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="px-7 pt-6 pb-7">
-            <label className="block text-[11.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase">
+          <div className="px-6 pt-4 pb-5">
+            <label className="block text-[11px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase">
               CNPJ do remetente
             </label>
             <input
               type="text"
               placeholder="00.000.000/0000-00"
-              className="mt-2 w-full rounded-xl border border-[var(--border)] px-4 py-3 text-[14px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-[var(--border)] px-3.5 py-2.5 text-[13.5px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:outline-none"
             />
 
-            <label className="mt-5 block text-[11.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase">
+            <label className="mt-3.5 block text-[11px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase">
               Notas fiscais{' '}
               <span className="font-normal normal-case text-[var(--text)]">(uma por linha)</span>
             </label>
             <textarea
-              rows={3}
+              rows={2}
               placeholder="Ex: 123456"
-              className="mt-2 w-full resize-none rounded-xl border border-[var(--border)] px-4 py-3 text-[14px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:outline-none"
+              className="mt-1.5 w-full resize-none rounded-xl border border-[var(--border)] px-3.5 py-2.5 text-[13.5px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:outline-none"
             />
 
             <button
               type="button"
-              className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-[#e11d2e] px-6 py-3.5 text-[13px] font-bold tracking-[0.3px] text-white uppercase transition-colors hover:bg-[#c8182a]"
+              className="mt-3.5 flex w-full items-center justify-center gap-2 rounded-full bg-[#e11d2e] px-6 py-3 text-[13px] font-bold tracking-[0.3px] text-white uppercase transition-colors hover:bg-[#c8182a]"
             >
               Rastrear agora
               <Icon id="arrow-right-icon" className="h-4 w-4" />
             </button>
 
-            <p className="mt-4 flex items-start gap-2 text-[12px] leading-[145%] text-[var(--text)]">
+            <p className="mt-3 flex items-start gap-2 text-[11.5px] leading-[140%] text-[var(--text)]">
               <Icon id="lock-icon" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#e11d2e]" />
               Consulta segura via sistema SSW. Rastreio por remetente, destinatário ou pagador — por
               NFs ou com senha.

@@ -51,7 +51,11 @@ export default function Frota() {
 
         <div className="relative mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
-            <span className="h-[2px] w-6 bg-[#f5c518]" aria-hidden="true" />
+            <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
+              <span className="h-[2px] bg-[#f5c518]" />
+              <span className="h-0 border-t-2 border-dashed border-[#f5c518]" />
+              <span className="h-[2px] bg-[#f5c518]" />
+            </span>
             O padrão Transmano
           </span>
 
@@ -83,7 +87,11 @@ export default function Frota() {
 
         <div className="relative mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
-            <span className="h-[2px] w-6 bg-[#f5c518]" aria-hidden="true" />
+            <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
+              <span className="h-[2px] bg-[#f5c518]" />
+              <span className="h-0 border-t-2 border-dashed border-[#f5c518]" />
+              <span className="h-[2px] bg-[#f5c518]" />
+            </span>
             Frota e monitoramento
           </span>
 

@@ -54,7 +54,11 @@ export default function Grupo() {
       >
         <div className="mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
           <span className="mx-auto flex w-fit items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
-            <span className="h-[2px] w-6 bg-[#e11d2e]" aria-hidden="true" />
+            <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
+              <span className="h-[2px] bg-[#e11d2e]" />
+              <span className="h-0 border-t-2 border-dashed border-[#e11d2e]" />
+              <span className="h-[2px] bg-[#e11d2e]" />
+            </span>
             O Grupo Transmano
           </span>
 
@@ -89,7 +93,11 @@ export default function Grupo() {
       <section className="relative left-1/2 w-screen -translate-x-1/2 bg-[#f5f5f7] text-left font-[family-name:var(--sans)]">
         <div className="mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
-            <span className="h-[2px] w-6 bg-[#e11d2e]" aria-hidden="true" />
+            <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
+              <span className="h-[2px] bg-[#e11d2e]" />
+              <span className="h-0 border-t-2 border-dashed border-[#e11d2e]" />
+              <span className="h-[2px] bg-[#e11d2e]" />
+            </span>
             Responsabilidade além das estradas
           </span>
 
