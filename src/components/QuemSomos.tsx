@@ -1,9 +1,9 @@
-const stats = [
+/* const stats = [
   { value: '20', label: 'anos de estrada' },
   { value: '12+', label: 'estados atendidos' },
   { value: '40', label: 'veículos próprios' },
 ]
-
+ */
 export default function QuemSomos() {
   return (
     <section

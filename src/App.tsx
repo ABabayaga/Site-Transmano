@@ -5,7 +5,7 @@ import Grupo from './components/Grupo'
 import Segmentos from './components/Segmentos'
 import ServicosPrestados from './components/ServicosPrestados'
 import Frota from './components/Frota'
-import Cotacao from './components/Cotacao'
+/* import Cotacao from './components/Cotacao' */
 import Footer from './components/Footer'
 import './App.css'
 
