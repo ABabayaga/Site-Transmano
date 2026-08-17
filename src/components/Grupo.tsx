@@ -1,11 +1,3 @@
-function Icon({ id, className = '' }: { id: string; className?: string }) {
-  return (
-    <svg className={`shrink-0 ${className}`} role="presentation" aria-hidden="true">
-      <use href={`/icons.svg#${id}`}></use>
-    </svg>
-  )
-}
-
 const empresas = [
   {
     prefix: 'Trans',
@@ -110,21 +102,21 @@ export default function Grupo() {
             pessoas na estrada e com as comunidades onde atuamos.
           </p>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
-            {responsabilidade.map((item) => (
+          <div className="mt-12 grid grid-cols-1 gap-3 md:grid-cols-3">
+            {responsabilidade.map((item, index) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-[var(--border)] bg-white p-8"
+                className="rounded-none border-l-2 border-[#e11d2e] pl-4 dark:border-red-400"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#fdeceb]">
-                  <Icon id={item.icon} className="h-5 w-5 text-[#e11d2e]" />
-                </div>
+                <span className="text-sm font-medium text-[#e11d2e] dark:text-red-400">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
 
-                <h3 className="mt-6 text-[15px] font-extrabold tracking-[-0.3px] text-[var(--text-h)] uppercase">
+                <h3 className="mt-1 text-[15px] font-medium text-[var(--text-h)]">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-[14.5px] leading-[150%] text-[var(--text)]">
+                <p className="mt-3 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                   {item.description}
                 </p>
               </div>
