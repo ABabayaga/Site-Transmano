@@ -10,7 +10,18 @@ export default function QuemSomos() {
       id="quem-somos"
       className="relative left-1/2 w-screen -translate-x-1/2 text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto grid max-w-[1440px] grid-cols-[1.05fr_1fr] items-center gap-16 px-8 py-24 max-[1080px]:grid-cols-1 max-[1080px]:gap-10 max-[860px]:px-5 max-[860px]:py-14">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_1.05fr] items-center gap-10 px-8 py-15 max-[1080px]:grid-cols-1 max-[1080px]:gap-10 max-[860px]:px-5 max-[860px]:py-14">
+        <div className="relative overflow-hidden rounded-3xl">
+          <img
+            src="/quem.jpg"
+            alt="Caminhão do Grupo Transmano em rodovia"
+            className="h-full max-h-[520px] w-full object-cover"
+          />
+          <span className="absolute bottom-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
+            Campo Grande · MS
+          </span>
+        </div>
+
         <div>
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
@@ -21,7 +32,7 @@ export default function QuemSomos() {
             Quem somos
           </span>
 
-          <h2 className="mt-4 text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+          <h2 className="mt-4 text-[52px] leading-[1.08] font-black! tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
             Referência em transporte e logística no Centro-Oeste
           </h2>
 
@@ -40,17 +51,6 @@ export default function QuemSomos() {
               </div>
             ))}
           </div> */}
-        </div>
-
-        <div className="relative overflow-hidden rounded-3xl">
-          <img
-            src="/quem.jpg"
-            alt="Caminhão do Grupo Transmano em rodovia"
-            className="h-full max-h-[520px] w-full object-cover"
-          />
-          <span className="absolute bottom-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
-            Campo Grande · MS
-          </span>
         </div>
       </div>
     </section>

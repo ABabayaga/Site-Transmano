@@ -22,8 +22,10 @@ There is no test suite configured.
 `src/main.tsx` mounts `<App />`. `src/App.tsx` renders one section component per landing-page section, in page order, with no props or shared state:
 
 ```
-Header → Hero → QuemSomos → Segmentos → ServicosPrestados → Frota → Grupo → Cotacao → Footer
+Header → Hero → QuemSomos → Segmentos → ServicosPrestados → Frota → Grupo → Footer
 ```
+
+`Cotacao.tsx` exists but its import/usage is currently commented out in `App.tsx` — it's mid-removal or paused, not deleted. Check with the user before re-enabling or deleting it.
 
 Each file in `src/components/` is a self-contained, default-exported section component. To add/reorder/remove a page section, edit the component and its import/usage in `App.tsx` — there's no registry or config beyond that.
 

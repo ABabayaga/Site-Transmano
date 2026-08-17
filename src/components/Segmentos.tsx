@@ -45,7 +45,7 @@ export default function Segmentos() {
       id="segmentos"
       className="relative left-1/2 w-screen -translate-x-1/2 text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
+      <div className="mx-auto max-w-[1340px] px-8 py-12 max-[860px]:px-5 max-[860px]:py-14">
         <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
           <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
           <span className="h-[2px] bg-[#e11d2e]" />
@@ -55,7 +55,7 @@ export default function Segmentos() {
           Segmentos especializados
         </span>
 
-        <h2 className="mt-4 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+        <h2 className="mt-4 max-w-[820px] font-black! text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
           Cada carga tem uma <span className="text-[#e11d2e]">exigência.</span> A gente conhece a
           sua.
         </h2>
@@ -69,9 +69,9 @@ export default function Segmentos() {
           {segmentos.map((segmento) => (
             <div
               key={segmento.title}
-              className="overflow-hidden rounded-3xl border border-[var(--border)] bg-white"
+              className="rounded-3xl border border-[var(--border)] bg-white p-6"
             >
-              <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src={segmento.image}
                   alt={segmento.title}
@@ -82,7 +82,7 @@ export default function Segmentos() {
                 </span>
               </div>
 
-              <div className="p-8">
+              <div className="pt-8">
                 <h3 className="text-[24px] font-extrabold tracking-[-0.5px] text-[var(--text-h)] uppercase">
                   {segmento.title}
                 </h3>

@@ -17,15 +17,15 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="relative left-1/2 w-screen -translate-x-1/2 bg-[#131313] text-left font-[family-name:var(--sans)]">
-      <div className="mx-auto max-w-[1440px] px-8 pt-20 pb-10 max-[860px]:px-5 max-[860px]:pt-14">
-        <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-12 max-[860px]:grid-cols-1 max-[860px]:gap-10">
+      <div className="mx-auto max-w-[1340px] px-8 pt-8 pb-4 max-[860px]:px-5 max-[860px]:pt-8">
+        <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-8 max-[860px]:grid-cols-1 max-[860px]:gap-6">
           <div>
             <img src="/Logo-Transmano-branca.png" alt="Transmano" className="h-9 w-auto" />
-            <p className="mt-5 max-w-[320px] text-[14.5px] leading-[150%] text-white/60">
+            <p className="mt-3 max-w-[320px] text-[14.5px] leading-[150%] text-white/60">
               Transporte e logística rodoviária de cargas com foco em previsibilidade, segurança e
               excelência operacional. Uma empresa do Grupo Transmano.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-3 flex items-center gap-3">
               <a
                 href="https://instagram.com/transmanotransportes"
                 target="_blank"
@@ -47,7 +47,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase">Navegação</h3>
-            <ul className="mt-5 flex flex-col gap-3.5 p-0">
+            <ul className="mt-3 flex flex-col gap-2 p-0">
               {navLinks.map((link) => (
                 <li key={link.label} className="list-none">
                   <a
@@ -65,7 +65,7 @@ export default function Footer() {
             <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase">
               Contato — Matriz
             </h3>
-            <ul className="mt-5 flex flex-col gap-3.5 p-0">
+            <ul className="mt-3 flex flex-col gap-2 p-0">
               <li className="flex list-none items-start gap-2.5 text-[14.5px] leading-[150%] text-white/60">
                 <Icon id="location-icon" className="mt-1 text-[#f5c518]" />
                 Av. Zilá Correa Machado, 2488, Km 8.8 — Jardim Itamaracá, Campo Grande/MS · CEP
@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-6 text-[13px] text-white/40 max-[860px]:mt-10">
+        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/40 max-[860px]:mt-6">
           <span>© 2026 Grupo Transmano — Transporte e Logística. Todos os direitos reservados.</span>
           <span>Rastreamento integrado via SSW.</span>
         </div>

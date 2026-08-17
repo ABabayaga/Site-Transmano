@@ -49,7 +49,7 @@ export default function Frota() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/20" />
         </div>
 
-        <div className="relative mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
+        <div className="relative mx-auto max-w-[1340px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
               <span className="h-[2px] bg-[#f5c518]" />
@@ -85,7 +85,7 @@ export default function Frota() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/90 to-[#0c0c0c]/50" />
         </div>
 
-        <div className="relative mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
+        <div className="relative mx-auto max-w-[1340px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
               <span className="h-[2px] bg-[#f5c518]" />

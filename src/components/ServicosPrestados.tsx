@@ -33,7 +33,7 @@ export default function ServicosPrestados() {
       id="servicos-prestados"
       className="relative left-1/2 w-screen -translate-x-1/2 bg-[#f5f5f7] text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto max-w-[1440px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
+      <div className="mx-auto max-w-[1340px] px-8 py-12 max-[860px]:px-5 max-[860px]:py-14">
         <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
           <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
             <span className="h-[2px] bg-[#e11d2e]" />
@@ -43,7 +43,7 @@ export default function ServicosPrestados() {
           Serviços prestados
         </span>
 
-        <h2 className="mt-4 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+        <h2 className="mt-4 max-w-[820px] text-[42px] font-black! leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
           Soluções completas em transporte rodoviário
         </h2>
 

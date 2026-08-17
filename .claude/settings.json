@@ -3,7 +3,30 @@
     "allow": [
       "Bash(lsof -ti:5175 -sTCP:LISTEN)",
       "Bash(lsof -i :5173 -sTCP:LISTEN -t)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173/quem.jpg)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173/quem.jpg)",
+      "Bash(curl -s \"https://fonts.googleapis.com/css2?family=Anton&display=swap\" -A \"Mozilla/5.0\")",
+      "Bash(rm -f /tmp/frota_shot.png)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --window-size=1440,2400 --screenshot=/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot.png \"http://localhost:5173/#frota\")",
+      "Bash(nohup npx vite --port 5199)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5199/)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --window-size=1440,3200 --screenshot=/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot.png \"http://localhost:5200/\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot.png)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --window-size=1440,5200 --screenshot=/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot2.png \"http://localhost:5200/\")",
+      "Bash(sips -c 1600 1440 --cropOffset 3200 0 /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot2.png --out /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_crop.png)",
+      "Bash(sips -c 400 1440 -p 3350 0 /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot2.png --out /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_crop2.png)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --window-size=1440,1100 --screenshot=/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_zoom.png \"http://localhost:5200/#frota\")",
+      "Bash(python3 -c \"import PIL; print\\('ok'\\)\")",
+      "Bash(python3 -m venv /tmp/pilenv --without-pip)",
+      "Bash(python3 -m pip install --break-system-packages --quiet pillow)",
+      "Bash(python3 -c ' *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --hide-scrollbars --window-size=1440,5200 --screenshot=/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/46cfb3ac-ff63-4802-a58e-cda79266a52b/scratchpad/frota_shot3.png \"http://localhost:5200/\")",
+      "Bash(pkill -f \"vite --port 5200\")",
+      "Bash(pkill -f \"vite --port 5199\")",
+      "Bash(curl -s http://localhost:5173/src/components/Grupo.tsx)",
+      "Bash(curl -s \"http://localhost:5173/src/components/Grupo.tsx\")",
+      "Bash(curl -sv \"http://localhost:5173/\")",
+      "Bash(node inspect.mjs)",
+      "Bash(node shot.mjs)"
     ]
   }
 }

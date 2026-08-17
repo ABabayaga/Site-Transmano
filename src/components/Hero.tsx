@@ -27,11 +27,11 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-[1440px] grid-cols-[1.15fr_1fr] items-start gap-16 px-8 py-20 max-[1080px]:grid-cols-1 max-[1080px]:gap-12 max-[860px]:px-5 max-[860px]:py-12">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
-            <span aria-hidden="true">•</span>
+           
             20 anos movendo o Centro-Oeste
           </span>
 
-          <h1 className="mt-6 font-['Archivo_Black'] text-[64px] leading-[0.98] font-normal tracking-[-1.5px] text-[var(--text-h)] uppercase max-[860px]:text-[38px]">
+          <h1 className="mt-6 font-['Anton'] text-[64px] leading-[0.98] font-normal tracking-[-0.5px] text-[var(--text-h)] uppercase max-[860px]:text-[38px]">
             Sua carga com <span className="text-[#e11d2e]">previsibilidade,</span> não com sorte.
           </h1>
 

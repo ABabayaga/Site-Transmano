@@ -44,9 +44,9 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-6 border-b border-[var(--border)] bg-[var(--bg)] px-8 py-2 max-[860px]:px-5 max-[860px]:py-2">
+      <nav className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-6 border-b border-[var(--border)] bg-[var(--bg)] px-8 py-1 max-[860px]:px-5 max-[860px]:py-1">
         <a href="#" className="flex shrink-0 items-center">
-          <img src="/Logo-Transmano.png" alt="Transmano" className="h-9 w-auto" />
+          <img src="/Logo-Transmano.png" alt="Transmano" className="h-20 w-auto" />
         </a>
 
         <ul className="m-0 flex flex-wrap items-center gap-7 p-0">
