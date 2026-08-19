@@ -4,9 +4,9 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 
 gsap.registerPlugin(ScrollToPlugin)
 
-const HEADER_OFFSET = 96
+/* const HEADER_OFFSET = 96 */
 
-function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
+/* function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
   if (!href.startsWith('#') || href.length < 2) return
   const target = document.querySelector(href)
   if (!target) return
@@ -17,7 +17,7 @@ function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: strin
     scrollTo: { y: target, offsetY: HEADER_OFFSET },
     ease: 'power2.inOut',
   })
-}
+} */
 
 const navLinks = [
   { label: 'Quem somos', href: '#quem-somos' },
