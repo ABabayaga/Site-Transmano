@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 const servicos = [
   {
     title: 'Carga fechada',
@@ -20,13 +22,15 @@ const servicos = [
 ]
 
 export default function ServicosPrestados() {
+  const ref = useScrollReveal<HTMLDivElement>('.gsap-reveal')
+
   return (
     <section
       id="servicos-prestados"
       className="relative left-1/2 w-screen -translate-x-1/2 bg-[#f5f5f7] text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto max-w-[1340px] px-8 py-12 max-[860px]:px-5 max-[860px]:py-14">
-        <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
+      <div ref={ref} className="mx-auto max-w-[1340px] px-8 py-12 max-[860px]:px-5 max-[860px]:py-14">
+        <span className="gsap-reveal flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
           <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
             <span className="h-[2px] bg-[#e11d2e]" />
             <span className="h-0 border-t-2 border-dashed border-[#e11d2e]" />
@@ -35,11 +39,11 @@ export default function ServicosPrestados() {
           Serviços prestados
         </span>
 
-        <h2 className="mt-4 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+        <h2 className="gsap-reveal mt-4 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
           Soluções completas em transporte rodoviário
         </h2>
 
-        <p className="mt-6 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
+        <p className="gsap-reveal mt-6 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
           Atuação nas regiões Centro-Oeste, Sudeste, Sul e Nordeste, com estrutura preparada para
           atender diferentes demandas logísticas com agilidade, segurança e precisão.
         </p>
@@ -48,7 +52,7 @@ export default function ServicosPrestados() {
           {servicos.map((servico) => (
             <div
               key={servico.title}
-              className="relative flex min-h-[260px] items-end overflow-hidden rounded-2xl border border-[var(--border)] p-8"
+              className="gsap-reveal relative flex min-h-[260px] items-end overflow-hidden rounded-2xl border border-[var(--border)] p-8"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"

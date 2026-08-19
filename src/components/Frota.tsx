@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 const frotaStats = [
   { value: '40', label: 'veículos próprios na frota' },
   { value: '20', label: 'anos de atuação no setor' },
@@ -29,6 +31,9 @@ const frotaFeatures = [
 ]
 
 export default function Frota() {
+  const padraoRef = useScrollReveal<HTMLDivElement>('.gsap-reveal')
+  const frotaRef = useScrollReveal<HTMLDivElement>('.gsap-reveal')
+
   return (
     <>
     {/* O padrão Transmano */}
@@ -50,8 +55,8 @@ export default function Frota() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
         </div>
 
-        <div className="relative mx-auto max-w-[1340px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
-          <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
+        <div ref={padraoRef} className="relative mx-auto max-w-[1340px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
+          <span className="gsap-reveal flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
               <span className="h-[2px] bg-[#f5c518]" />
               <span className="h-0 border-t-2 border-dashed border-[#f5c518]" />
@@ -60,13 +65,13 @@ export default function Frota() {
             O padrão Transmano
           </span>
 
-          <h2 className="mt-4 max-w-[760px] text-[40px] leading-[1.08] font-extrabold tracking-[-1px] text-white uppercase max-[860px]:text-[30px]">
+          <h2 className="gsap-reveal mt-4 max-w-[760px] text-[40px] leading-[1.08] font-extrabold tracking-[-1px] text-white uppercase max-[860px]:text-[30px]">
             Chegar no horário não é diferencial.
             <br />
             É o <span className="text-[#f5c518]">mínimo</span> que a sua operação merece.
           </h2>
 
-          <p className="mt-6 max-w-[560px] text-[16px] leading-[150%] text-white/70">
+          <p className="gsap-reveal mt-6 max-w-[560px] text-[16px] leading-[150%] text-white/70">
             Planejamento, controle operacional e comunicação ativa em cada quilômetro para reduzir
             variáveis e garantir entregas mais estáveis.
           </p>
@@ -87,8 +92,8 @@ export default function Frota() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/90 to-[#0c0c0c]/50" />
         </div>
 
-        <div className="relative mx-auto max-w-[1340px] px-8 py-10 max-[860px]:px-5 max-[860px]:py-8">
-          <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
+        <div ref={frotaRef} className="relative mx-auto max-w-[1340px] px-8 py-10 max-[860px]:px-5 max-[860px]:py-8">
+          <span className="gsap-reveal flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#f5c518] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
               <span className="h-[2px] bg-[#f5c518]" />
               <span className="h-0 border-t-2 border-dashed border-[#f5c518]" />
@@ -97,12 +102,12 @@ export default function Frota() {
             Frota e monitoramento
           </span>
 
-          <h2 className="mt-2 max-w-[600px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-white uppercase max-[860px]:text-[30px]">
+          <h2 className="gsap-reveal mt-2 max-w-[600px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-white uppercase max-[860px]:text-[30px]">
             Frota própria, nova e monitorada 24 horas
           </h2>
 
           <div className="mt-6 grid grid-cols-[1.1fr_1fr] items-start gap-16 max-[1080px]:grid-cols-1 max-[1080px]:gap-6">
-            <div>
+            <div className="gsap-reveal">
               <p className="max-w-[500px] text-[16px] leading-[150%] text-white/70">
                 Contamos com frota própria de 40 veículos novos e seminovos, com até 5 anos de
                 fabricação, prontos para diferentes tipos de operação logística.
@@ -126,7 +131,7 @@ export default function Frota() {
               </ul>
             </div>
 
-            <div className="rounded-[4px] border border-white/10">
+            <div className="gsap-reveal rounded-[4px] border border-white/10">
               <div className="border-b border-white/10 bg-[#f5c518]/[0.08] px-5 py-1.5 font-mono text-[11px] font-bold tracking-[0.5px] text-[#f5c518] uppercase">
                 Frota em números
               </div>

@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 function Icon({ id, className = '' }: { id: string; className?: string }) {
   return (
     <svg className={`shrink-0 ${className}`} role="presentation" aria-hidden="true">
@@ -40,13 +42,15 @@ const segmentos = [
 ]
 
 export default function Segmentos() {
+  const ref = useScrollReveal<HTMLDivElement>('.gsap-reveal')
+
   return (
     <section
       id="segmentos"
       className="relative left-1/2 w-screen -translate-x-1/2 text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto max-w-[1340px] px-8 py-8 max-[860px]:px-5 max-[860px]:py-10">
-        <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
+      <div ref={ref} className="mx-auto max-w-[1340px] px-8 py-8 max-[860px]:px-5 max-[860px]:py-10">
+        <span className="gsap-reveal flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
           <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
           <span className="h-[2px] bg-[#e11d2e]" />
           <span className="h-0 border-t-2 border-dashed border-[#e11d2e]" />
@@ -55,12 +59,12 @@ export default function Segmentos() {
           Segmentos especializados
         </span>
 
-        <h2 className="mt-3 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+        <h2 className="gsap-reveal mt-3 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
           Cada carga tem uma <span className="text-[#e11d2e]">exigência.</span> A gente conhece a
           sua.
         </h2>
 
-        <p className="mt-4 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
+        <p className="gsap-reveal mt-4 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
           Transportar bem não é mover volume: é entender o que cada setor não pode perder. Veja o
           padrão de operação que aplicamos onde somos especialistas.
         </p>
@@ -69,7 +73,7 @@ export default function Segmentos() {
           {segmentos.map((segmento) => (
             <div
               key={segmento.title}
-              className="rounded-3xl border border-[var(--border)] bg-white p-6"
+              className="gsap-reveal rounded-3xl border border-[var(--border)] bg-white p-6"
             >
               <div className="relative overflow-hidden rounded-2xl">
                 <img

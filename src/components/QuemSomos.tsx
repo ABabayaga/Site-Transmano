@@ -4,14 +4,21 @@
   { value: '40', label: 'veículos próprios' },
 ]
  */
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export default function QuemSomos() {
+  const ref = useScrollReveal<HTMLDivElement>('.gsap-reveal')
+
   return (
     <section
       id="quem-somos"
       className="relative left-1/2 w-screen -translate-x-1/2 text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_1.05fr] items-center gap-10 px-8 py-15 max-[1080px]:grid-cols-1 max-[1080px]:gap-10 max-[860px]:px-5 max-[860px]:py-14">
-        <div className="relative overflow-hidden rounded-3xl">
+      <div
+        ref={ref}
+        className="mx-auto grid max-w-[1200px] grid-cols-[1fr_1.05fr] items-center gap-10 px-8 py-15 max-[1080px]:grid-cols-1 max-[1080px]:gap-10 max-[860px]:px-5 max-[860px]:py-14"
+      >
+        <div className="gsap-reveal relative overflow-hidden rounded-3xl">
           <img
             src="/quem.jpg"
             alt="Caminhão do Grupo Transmano em rodovia"
@@ -22,7 +29,7 @@ export default function QuemSomos() {
           </span>
         </div>
 
-        <div>
+        <div className="gsap-reveal">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
               <span className="h-[2px] bg-[#e11d2e]" />
