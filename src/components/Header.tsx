@@ -83,7 +83,7 @@ export default function Header() {
   return (
     <header className="text-left font-[family-name:var(--sans)]">
       <div ref={topBarRef} className="absolute inset-x-0 top-0 z-50 bg-[#131313] text-white/85">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-6 px-8 py-1 text-[13px] max-[900px]:grid-cols-1 max-[860px]:px-5 max-[860px]:py-1">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-center gap-32 px-8 py-1 text-[13px] max-[900px]:gap-0 max-[860px]:px-5 max-[860px]:py-1">
           <div className="flex items-center justify-center gap-7 max-[900px]:hidden">
             <span className="flex items-center gap-2 whitespace-nowrap">
               <span className="relative flex h-2 w-2 shrink-0 items-center justify-center text-green-500" aria-hidden="true">
@@ -94,7 +94,7 @@ export default function Header() {
             </span>
             <span className="flex items-center gap-2 whitespace-nowrap">
               <Icon id="location-icon" className="text-white/55" />
-              Campo Grande/MS · São Paulo
+              Campo Grande/MS
             </span>
           </div>
           <div className="flex items-center justify-center gap-7 max-[480px]:gap-3">
@@ -104,7 +104,7 @@ export default function Header() {
             </a>
             <a href="tel:+556700000000" className="flex items-center gap-2 whitespace-nowrap text-inherit no-underline transition-colors hover:text-white">
               <Icon id="phone-icon" className="text-white/55" />
-              (67) 0000-0000
+              0800 7033 339
             </a>
           </div>
         </div>
