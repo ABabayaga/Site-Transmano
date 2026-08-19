@@ -1,3 +1,11 @@
+function Icon({ id, className = '' }: { id: string; className?: string }) {
+  return (
+    <svg className={`shrink-0 ${className}`} role="presentation" aria-hidden="true">
+      <use href={`/icons.svg#${id}`}></use>
+    </svg>
+  )
+}
+
 const empresas = [
   {
     prefix: 'Trans',
@@ -7,12 +15,12 @@ const empresas = [
   {
     prefix: 'Cent',
     highlight: 'ral',
-    description: 'Logística e Transportes — capilaridade e redistribuição de cargas.',
+    description: 'Logística e Transportes: capilaridade e redistribuição de cargas.',
   },
   {
     prefix: 'ALD',
     highlight: '',
-    description: 'Transportes e Locações — apoio operacional e soluções complementares.',
+    description: 'Transportes e Locações: apoio operacional e soluções complementares.',
   },
 ]
 
@@ -98,25 +106,20 @@ export default function Grupo() {
           </h2>
 
           <p className="mt-6 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
-            Acreditamos que empresas também têm responsabilidade dentro da sociedade — com as
+            Acreditamos que empresas também têm responsabilidade dentro da sociedade: com as
             pessoas na estrada e com as comunidades onde atuamos.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-3 md:grid-cols-3">
-            {responsabilidade.map((item, index) => (
-              <div
-                key={item.title}
-                className="rounded-none border-l-2 border-[#e11d2e] pl-4 dark:border-red-400"
-              >
-                <span className="text-sm font-medium text-[#e11d2e] dark:text-red-400">
-                  {String(index + 1).padStart(2, '0')}
+          <div className="mt-12 grid grid-cols-3 gap-6 max-[860px]:grid-cols-1">
+            {responsabilidade.map((item) => (
+              <div key={item.title} className="rounded-2xl bg-white p-6">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--border)] bg-[#fdf6e3]">
+                  <Icon id={item.icon} className="h-5 w-5 text-[#e0a000]" />
                 </span>
 
-                <h3 className="mt-1 text-[15px] font-medium text-[var(--text-h)]">
-                  {item.title}
-                </h3>
+                <h3 className="mt-4 text-[15px] font-bold text-[var(--text-h)]">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                <p className="mt-2 text-[13.5px] leading-[150%] text-[var(--text)]">
                   {item.description}
                 </p>
               </div>

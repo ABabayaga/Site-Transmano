@@ -35,7 +35,7 @@ export default function ServicosPrestados() {
           Serviços prestados
         </span>
 
-        <h2 className="mt-4 max-w-[820px] text-[42px] font-black! leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+        <h2 className="mt-4 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
           Soluções completas em transporte rodoviário
         </h2>
 

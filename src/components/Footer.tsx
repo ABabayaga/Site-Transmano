@@ -63,12 +63,12 @@ export default function Footer() {
 
           <div>
             <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase">
-              Contato — Matriz
+              Contato: Matriz
             </h3>
             <ul className="mt-3 flex flex-col gap-2 p-0">
               <li className="flex list-none items-start gap-2.5 text-[14.5px] leading-[150%] text-white/60">
                 <Icon id="location-icon" className="mt-1 text-[#f5c518]" />
-                Av. Zilá Correa Machado, 2488, Km 8.8 — Jardim Itamaracá, Campo Grande/MS · CEP
+                Av. Zilá Correa Machado, 2488, Km 8.8, Jardim Itamaracá, Campo Grande/MS · CEP
                 79062-000
               </li>
               <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60">
@@ -83,8 +83,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/40 max-[860px]:mt-6">
-          <span>© 2026 Grupo Transmano — Transporte e Logística. Todos os direitos reservados.</span>
+        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/55 max-[860px]:mt-6">
+          <span>© 2026 Grupo Transmano, Transporte e Logística. Todos os direitos reservados.</span>
           <span>Rastreamento integrado via SSW.</span>
         </div>
       </div>

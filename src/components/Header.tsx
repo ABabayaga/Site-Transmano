@@ -54,7 +54,7 @@ export default function Header() {
             <li key={label} className="list-none">
               <a
                 href={`#${label.toLowerCase().replace(/\s+/g, '-')}`}
-                className="group relative inline-flex flex-col items-center py-1 text-[13.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase no-underline transition-colors hover:text-[#e0b30f]"
+                className="group relative inline-flex flex-col items-center py-1 text-[13.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase no-underline transition-colors hover:text-[#e11d2e]"
               >
                 {label}
                 <span className="absolute -bottom-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-[#f5c518] transition-transform duration-200 group-hover:scale-x-100" />
@@ -66,14 +66,14 @@ export default function Header() {
         <div className="ml-auto flex shrink-0 items-center gap-4">
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full border border-[var(--border)] px-5 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase transition-colors hover:border-[var(--text-h)]"
+            className="flex items-center gap-2 rounded-full border border-[var(--border)] px-5 py-3 text-[12.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase transition-colors hover:border-[var(--text-h)]"
           >
             <Icon id="search-icon" className="text-[var(--text-h)]" />
             Área do cliente
           </button>
           <a
             href="#cotacao"
-            className="flex items-center gap-2 rounded-full bg-[#f5c518] px-5.5 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase no-underline transition-colors hover:bg-[#e0b30f]"
+            className="flex items-center gap-2 rounded-full bg-[#f5c518] px-5.5 py-3 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase no-underline transition-colors hover:bg-[#e0b30f]"
           >
             Cotação
             <Icon id="arrow-right-icon" />

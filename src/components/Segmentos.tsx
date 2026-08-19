@@ -16,18 +16,18 @@ const segmentos = [
     requisitos: [
       'Rotas planejadas pela janela de recebimento de cada cliente',
       'Controle de integridade da carga durante toda a jornada',
-      'Comunicação ativa em cada etapa — sem o embarcador precisar ligar',
+      'Comunicação ativa em cada etapa: sem o embarcador precisar ligar',
       'Adaptação rápida quando o CD muda a janela de última hora',
     ],
     alerta:
-      'Uma falha aqui vira ruptura de gôndola, multa contratual ou perda de produto. Por isso, eficiência não é diferencial — é o mínimo.',
+      'Uma falha aqui vira ruptura de gôndola, multa contratual ou perda de produto. Por isso, eficiência não é diferencial: é o mínimo.',
   },
   {
     tag: 'Placas solares',
     image: 'segsol.jpg',
     title: 'Painéis fotovoltaicos',
     description:
-      'Painel solar não é carga comum. A avaria nem sempre aparece na entrega — muitas vezes só aparece depois, com os módulos já instalados e gerando abaixo do esperado. Aí a conta chega dobrada.',
+      'Painel solar não é carga comum. A avaria nem sempre aparece na entrega. Muitas vezes só aparece depois, com os módulos já instalados e gerando abaixo do esperado. Aí a conta chega dobrada.',
     requisitos: [
       'Amarração técnica com verificação em pontos críticos da rota',
       'Proteção contra vibração e acondicionamento por modelo de módulo',
@@ -45,7 +45,7 @@ export default function Segmentos() {
       id="segmentos"
       className="relative left-1/2 w-screen -translate-x-1/2 text-left font-[family-name:var(--sans)]"
     >
-      <div className="mx-auto max-w-[1340px] px-8 py-12 max-[860px]:px-5 max-[860px]:py-14">
+      <div className="mx-auto max-w-[1340px] px-8 py-8 max-[860px]:px-5 max-[860px]:py-10">
         <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
           <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
           <span className="h-[2px] bg-[#e11d2e]" />
@@ -55,17 +55,17 @@ export default function Segmentos() {
           Segmentos especializados
         </span>
 
-        <h2 className="mt-4 max-w-[820px] font-black! text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+        <h2 className="mt-3 max-w-[820px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
           Cada carga tem uma <span className="text-[#e11d2e]">exigência.</span> A gente conhece a
           sua.
         </h2>
 
-        <p className="mt-6 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
-          Transportar bem não é mover volume — é entender o que cada setor não pode perder. Veja o
+        <p className="mt-4 max-w-[600px] text-[16px] leading-[150%] text-[var(--text)]">
+          Transportar bem não é mover volume: é entender o que cada setor não pode perder. Veja o
           padrão de operação que aplicamos onde somos especialistas.
         </p>
 
-        <div className="mt-12 grid grid-cols-2 gap-8 max-[900px]:grid-cols-1">
+        <div className="mt-8 grid grid-cols-2 gap-8 max-[900px]:grid-cols-1">
           {segmentos.map((segmento) => (
             <div
               key={segmento.title}
@@ -75,27 +75,27 @@ export default function Segmentos() {
                 <img
                   src={segmento.image}
                   alt={segmento.title}
-                  className="h-[280px] w-full object-cover"
+                  className="h-[220px] w-full object-cover"
                 />
                 <span className="absolute top-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
                   {segmento.tag}
                 </span>
               </div>
 
-              <div className="pt-8">
+              <div className="pt-5">
                 <h3 className="text-[24px] font-extrabold tracking-[-0.5px] text-[var(--text-h)] uppercase">
                   {segmento.title}
                 </h3>
 
-                <p className="mt-3 text-[15px] leading-[150%] text-[var(--text)]">
+                <p className="mt-2 text-[15px] leading-[150%] text-[var(--text)]">
                   {segmento.description}
                 </p>
 
-                <div className="mt-6 text-[12.5px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
+                <div className="mt-4 text-[12.5px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
                   Padrão de exigência que aplicamos
                 </div>
 
-                <ul className="mt-4 flex flex-col gap-3">
+                <ul className="mt-3 flex flex-col gap-2">
                   {segmento.requisitos.map((requisito) => (
                     <li key={requisito} className="flex items-start gap-3">
                       <Icon
@@ -109,7 +109,7 @@ export default function Segmentos() {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex items-start gap-3 rounded-2xl bg-[#fdf6e3] px-5 py-4">
+                <div className="mt-4 flex items-start gap-3 rounded-2xl bg-[#fdf6e3] px-5 py-4">
                   <Icon
                     id="warning-icon"
                     className="mt-0.5 h-4 w-4 shrink-0 text-[#e0a000]"

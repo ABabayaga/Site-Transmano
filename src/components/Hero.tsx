@@ -101,7 +101,7 @@ export default function Hero() {
             <input
               type="text"
               placeholder="00.000.000/0000-00"
-              className="mt-1.5 w-full rounded-xl border border-[var(--border)] px-3.5 py-2.5 text-[13.5px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-[var(--border)] px-3.5 py-2.5 text-[13.5px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:border-[#e11d2e] focus:outline-none"
             />
 
             <label className="mt-3.5 block text-[11px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase">
@@ -111,7 +111,7 @@ export default function Hero() {
             <textarea
               rows={2}
               placeholder="Ex: 123456"
-              className="mt-1.5 w-full resize-none rounded-xl border border-[var(--border)] px-3.5 py-2.5 text-[13.5px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:outline-none"
+              className="mt-1.5 w-full resize-none rounded-xl border border-[var(--border)] px-3.5 py-2.5 text-[13.5px] text-[var(--text-h)] placeholder:text-[var(--text)]/60 focus:border-[#e11d2e] focus:outline-none"
             />
 
             <button
@@ -124,7 +124,7 @@ export default function Hero() {
 
             <p className="mt-3 flex items-start gap-2 text-[11.5px] leading-[140%] text-[var(--text)]">
               <Icon id="lock-icon" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#e11d2e]" />
-              Consulta segura via sistema SSW. Rastreio por remetente, destinatário ou pagador — por
+              Consulta segura via sistema SSW. Rastreio por remetente, destinatário ou pagador, por
               NFs ou com senha.
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function Hero() {
       </div>
 
       <div className="relative border-t border-white/10 bg-[#131313] py-3 text-center text-[13px] text-white/70">
-        Uma empresa do <span className="font-bold text-[#f5c518]">Grupo Transmano</span> — Transmano
+        Uma empresa do <span className="font-bold text-[#f5c518]">Grupo Transmano</span>: Transmano
         · Central Logística e Transportes · ALD Transportes e Locações
       </div>
     </section>

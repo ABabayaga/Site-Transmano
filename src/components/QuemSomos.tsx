@@ -32,7 +32,7 @@ export default function QuemSomos() {
             Quem somos
           </span>
 
-          <h2 className="mt-4 text-[52px] leading-[1.08] font-black! tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
+          <h2 className="mt-4 max-w-[600px] text-[42px] leading-[1.08] font-extrabold tracking-[-1px] text-[var(--text-h)] uppercase max-[860px]:text-[30px]">
             Referência em transporte e logística no Centro-Oeste
           </h2>
 

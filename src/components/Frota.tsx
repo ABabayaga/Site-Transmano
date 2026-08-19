@@ -39,14 +39,18 @@ const frotaFeatures = [
 export default function Frota() {
   return (
     <>
+    {/* O padrão Transmano */}
       <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-black text-left font-[family-name:var(--sans)]">
-        <div className="absolute inset-0">
-          <img
-            src="https://source.unsplash.com/1600x900/?truck,mountains,night"
-            alt=""
-            className="h-full w-full object-cover opacity-60"
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-40 -right-20 h-[520px] w-[520px] rounded-full bg-[#f5c518]/10 blur-3xl" />
+          <div
+            className="absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)',
+              backgroundSize: '22px 22px',
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
         </div>
 
         <div className="relative mx-auto max-w-[1340px] px-8 py-24 max-[860px]:px-5 max-[860px]:py-14">
@@ -66,12 +70,13 @@ export default function Frota() {
           </h2>
 
           <p className="mt-6 max-w-[560px] text-[16px] leading-[150%] text-white/70">
-            Planejamento, controle operacional e comunicação ativa em cada quilômetro — para reduzir
+            Planejamento, controle operacional e comunicação ativa em cada quilômetro para reduzir
             variáveis e garantir entregas mais estáveis.
           </p>
         </div>
       </section>
 
+      {/* Frota e monitoramento*/}
       <section
         id="frota"
         className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#0c0c0c] text-left font-[family-name:var(--sans)]"

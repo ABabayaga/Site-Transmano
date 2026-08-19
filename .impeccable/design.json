@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-19T00:00:00Z",
+  "title": "Design System: Transmano",
+  "extensions": {
+    "colorMeta": {
+      "caution-yellow": { "role": "primary", "displayName": "Caution Yellow", "canonical": "#f5c518", "tonalRamp": ["#3d2f00", "#5c4700", "#8a6a00", "#b88c00", "#e0b30f", "#f5c518", "#f9d76b", "#fdeeb8"] },
+      "caution-yellow-deep": { "role": "primary-hover", "displayName": "Caution Yellow Deep", "canonical": "#e0b30f", "tonalRamp": ["#3d2f00", "#5c4700", "#8a6a00", "#b88c00", "#e0b30f", "#f0c530", "#f5d670", "#fbe9ae"] },
+      "alert-red": { "role": "secondary", "displayName": "Alert Red", "canonical": "#e11d2e", "tonalRamp": ["#330609", "#5c0b10", "#8a1420", "#b8172b", "#e11d2e", "#e6202f", "#f0555f", "#f8a4aa"] },
+      "alert-red-deep": { "role": "secondary-hover", "displayName": "Alert Red Deep", "canonical": "#c8182a", "tonalRamp": ["#2e0912", "#4c0f1c", "#791629", "#a3182b", "#c8182a", "#d63e4c", "#e8828c", "#f5c0c4"] },
+      "ink": { "role": "on-primary-text", "displayName": "Ink", "canonical": "#171717", "tonalRamp": ["#000000", "#0c0c0c", "#171717", "#2b2b2b", "#4a4a4a", "#6e6e6e", "#a3a3a3", "#d4d4d4"] },
+      "panel-black": { "role": "surface-dark", "displayName": "Panel Black", "canonical": "#131313", "tonalRamp": ["#000000", "#0c0c0c", "#131313", "#1f1f1f", "#333333", "#525252", "#8a8a8a", "#c7c7c7"] },
+      "panel-black-deep": { "role": "surface-darkest", "displayName": "Panel Black Deep", "canonical": "#0c0c0c", "tonalRamp": ["#000000", "#080808", "#0c0c0c", "#181818", "#2c2c2c", "#4a4a4a", "#828282", "#c2c2c2"] },
+      "paper": { "role": "surface-light", "displayName": "Paper", "canonical": "#fafafa", "tonalRamp": ["#1a1a1a", "#333333", "#525252", "#7a7a7a", "#a8a8a8", "#d4d4d4", "#ececec", "#fafafa"] },
+      "surface": { "role": "surface", "displayName": "Surface White", "canonical": "#ffffff", "tonalRamp": ["#1a1a1a", "#333333", "#525252", "#7a7a7a", "#a8a8a8", "#d4d4d4", "#f0f0f0", "#ffffff"] },
+      "text-body": { "role": "text-secondary", "displayName": "Text Body", "canonical": "#6b6375", "tonalRamp": ["#08060d", "#231f28", "#3f3945", "#544c5c", "#6b6375", "#9ca3af", "#c2c7d1", "#e5e4e7"] },
+      "text-heading": { "role": "text-primary", "displayName": "Text Heading", "canonical": "#08060d", "tonalRamp": ["#000000", "#08060d", "#1a1720", "#2f2b38", "#4a4555", "#6b6375", "#9ca3af", "#e5e4e7"] },
+      "border": { "role": "outline", "displayName": "Border", "canonical": "#e5e4e7", "tonalRamp": ["#2e303a", "#454750", "#5e6069", "#797b82", "#97989e", "#b8b9bd", "#d5d5d8", "#e5e4e7"] },
+      "amber-wash": { "role": "caution-surface", "displayName": "Amber Wash", "canonical": "#fdf6e3", "tonalRamp": ["#4d3d00", "#6e5800", "#987b00", "#c29f0d", "#e0a000", "#f0c34a", "#f8e0a0", "#fdf6e3"] },
+      "amber-ink": { "role": "caution-icon", "displayName": "Amber Ink", "canonical": "#e0a000", "tonalRamp": ["#332600", "#4d3900", "#725500", "#997200", "#c29000", "#e0a000", "#f0bd4d", "#f8dc9e"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Anton)", "purpose": "Hero H1 only — the system's single dramatic beat." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s (Segmentos, Frota panels)." },
+      "title": { "displayName": "Title", "purpose": "Card-level H3s (segment card titles)." },
+      "body": { "displayName": "Body", "purpose": "Descriptive paragraphs." },
+      "label": { "displayName": "Label", "purpose": "Nav links, kickers, badges, button text, stat captions." }
+    },
+    "shadows": [
+      { "name": "float", "value": "0 20px 50px -12px rgba(0,0,0,0.25)", "purpose": "Elements that visually float above a light section, e.g. the Hero tracking-widget card." },
+      { "name": "float-deep", "value": "0 20px 50px -12px rgba(0,0,0,0.35)", "purpose": "Deeper variant of Float, used where the floating element needs more separation." },
+      { "name": "lift-small", "value": "0 4px 10px rgba(0,0,0,0.08)", "purpose": "The active tab pill inside the tracking widget." },
+      { "name": "fab", "value": "0 8px 24px rgba(0,0,0,0.3)", "purpose": "The fixed WhatsApp button." }
+    ],
+    "motion": [
+      { "name": "underline-reveal", "value": "transform scale-x 200ms, transition-colors", "purpose": "Nav link hover: a 2px Caution Yellow underline scales in from the left as the label fades toward Caution Yellow Deep." },
+      { "name": "fab-hover", "value": "transform: scale(1.05)", "purpose": "WhatsApp FAB hover." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "1080px" },
+      { "name": "narrow", "value": "900px" },
+      { "name": "mobile", "value": "860px" },
+      { "name": "small", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main conversion CTA (e.g. \"Solicitar cotação\").",
+      "html": "<a class=\"ds-btn-primary\" href=\"#cotacao\">Solicitar cotação</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #f5c518; color: #171717; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase; text-decoration: none; padding: 14px 24px; border-radius: 9999px; transition: background 0.2s; } .ds-btn-primary:hover { background: #e0b30f; } .ds-btn-primary:focus-visible { outline: 2px solid #171717; outline-offset: 2px; }"
+    },
+    {
+      "name": "Urgent Button",
+      "kind": "button",
+      "refersTo": "button-urgent",
+      "description": "In-context urgent action (e.g. \"Rastrear agora\" inside the tracking widget).",
+      "html": "<button class=\"ds-btn-urgent\" type=\"button\">Rastrear agora</button>",
+      "css": ".ds-btn-urgent { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: #e11d2e; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase; padding: 12px 24px; border: none; border-radius: 9999px; cursor: pointer; transition: background 0.2s; } .ds-btn-urgent:hover { background: #c8182a; } .ds-btn-urgent:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action (e.g. \"Ver segmentos\").",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#segmentos\">Ver segmentos</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #08060d; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase; text-decoration: none; padding: 14px 24px; border: 1px solid #e5e4e7; border-radius: 9999px; transition: border-color 0.2s; } .ds-btn-ghost:hover { border-color: #08060d; }"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Hero stat badge / segment category tag overlaid on an image.",
+      "html": "<span class=\"ds-badge\">20 anos movendo o Centro-Oeste</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 8px; background: #f5c518; color: #171717; font-weight: 700; font-size: 12.5px; letter-spacing: 0.3px; text-transform: uppercase; padding: 8px 16px; border-radius: 9999px; }"
+    },
+    {
+      "name": "Segment Card",
+      "kind": "card",
+      "refersTo": "card-light",
+      "description": "Light content card with image, title, requirements list, and alert callout.",
+      "html": "<div class=\"ds-card-light\"><h3 class=\"ds-card-light-title\">Transporte de alimentos</h3><p class=\"ds-card-light-body\">No abastecimento, o relógio não para.</p><div class=\"ds-alert-callout\">Uma falha aqui vira ruptura de gôndola.</div></div>",
+      "css": ".ds-card-light { border-radius: 24px; border: 1px solid #e5e4e7; background: #fff; padding: 24px; } .ds-card-light-title { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; text-transform: uppercase; color: #08060d; margin: 0 0 8px; } .ds-card-light-body { font-size: 15px; line-height: 1.5; color: #6b6375; margin: 0 0 16px; } .ds-alert-callout { display: flex; gap: 12px; border-radius: 16px; background: #fdf6e3; padding: 16px 20px; font-size: 13.5px; line-height: 1.5; color: #6b6375; }"
+    },
+    {
+      "name": "Dark Stat Tile",
+      "kind": "card",
+      "refersTo": "card-dark",
+      "description": "Fleet stat tile on a dark panel (Frota section).",
+      "html": "<div class=\"ds-stat-tile\"><div class=\"ds-stat-value\">40</div><div class=\"ds-stat-label\">veículos próprios na frota</div></div>",
+      "css": ".ds-stat-tile { border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); backdrop-filter: blur(4px); padding: 24px; } .ds-stat-value { font-size: 36px; font-weight: 800; color: #f5c518; } .ds-stat-label { margin-top: 4px; font-size: 13.5px; color: rgba(255,255,255,0.6); }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": null,
+      "description": "Tracking-widget text field (observed focus gap: no visible focus style in source).",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"00.000.000/0000-00\" />",
+      "css": ".ds-input { width: 100%; border-radius: 12px; border: 1px solid #e5e4e7; padding: 10px 14px; font-size: 13.5px; color: #08060d; } .ds-input::placeholder { color: rgba(107,99,117,0.6); } .ds-input:focus-visible { outline: 2px solid #f5c518; outline-offset: 1px; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Main nav link with scale-in underline on hover.",
+      "html": "<a class=\"ds-nav-link\" href=\"#segmentos\">Segmentos<span class=\"ds-nav-underline\"></span></a>",
+      "css": ".ds-nav-link { position: relative; display: inline-flex; flex-direction: column; align-items: center; padding: 4px 0; font-size: 13.5px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #08060d; text-decoration: none; } .ds-nav-link:hover { color: #e0b30f; } .ds-nav-underline { position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: #f5c518; transform: scaleX(0); transform-origin: left; transition: transform 0.2s; } .ds-nav-link:hover .ds-nav-underline { transform: scaleX(1); }"
+    },
+    {
+      "name": "Section Kicker",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The signature three-bar glyph + uppercase eyebrow label preceding every section heading.",
+      "html": "<span class=\"ds-kicker\"><span class=\"ds-kicker-glyph\"><span></span><span class=\"dash\"></span><span></span></span>Segmentos especializados</span>",
+      "css": ".ds-kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #e11d2e; } .ds-kicker-glyph { display: flex; flex-direction: column; gap: 3px; width: 24px; } .ds-kicker-glyph span { height: 2px; background: #e11d2e; } .ds-kicker-glyph span.dash { height: 0; border-top: 2px dashed #e11d2e; background: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Highway Control Room",
+    "overview": "Transmano's visual language is a public-facing dispatch panel: the confidence of a logistics command center where every truck is a tracked dot and every claim is backed by a live number. Caution yellow does the work of an operational signal — it marks the primary action, the badge that proves a stat, the icon on a monitored dashboard — while alert red is reserved for stakes and urgency: the word inside a headline that carries the risk, the button that starts a real-time trace, the icon on a warning callout. Anton in all-caps carries the one moment of physical, stenciled weight (the hero headline); everywhere else, a plain system sans stays out of the way so the numbers and operational copy read fast.\n\nThe system rejects soft marketing gloss: no illustration style, no rounded mascot iconography, no pastel palette. Panels are flat and dark where the site talks about the fleet and the operation (near-black backgrounds, hairline white borders, translucent white fills — like backlit control-room glass), and bright and light where it talks to the buyer making a decision (white/paper backgrounds, high-contrast black headlines). Cards are generously rounded (16–24px) which keeps the industrial palette from reading harsh, but every corner, badge, and CTA is a pill or a soft rectangle — never sharp, never skeuomorphic.",
+    "keyCharacteristics": [
+      "Caution-yellow CTAs and badges against near-black or paper-white grounds; alert-red reserved for stakes and urgent actions.",
+      "One display moment (Anton, uppercase, hero H1 only); everything else in a fast, neutral system sans.",
+      "Dark sections read as backlit control-room panels: flat, no shadows, depth from white-opacity fills and hairline borders.",
+      "Light sections read as bright decision surfaces: white cards, soft ambient shadows, high-contrast black headlines.",
+      "A recurring \"kicker\" glyph (three horizontal bars: solid–dashed–solid) precedes every section eyebrow label."
+    ],
+    "rules": [
+      { "name": "The Ink-on-Yellow Rule", "body": "Caution Yellow surfaces always carry #171717 text, never white — yellow is a light color and needs dark text to stay legible and on-brand.", "section": "colors" },
+      { "name": "The One Red Word Rule", "body": "Alert Red is used sparingly inside headlines — typically one phrase per H1/H2 that names the actual stake or risk — not as a general accent color splashed across a section.", "section": "colors" },
+      { "name": "The One Display Moment Rule", "body": "Anton is reserved for the Hero H1. Every other heading — however large — stays in the system sans at extrabold weight.", "section": "typography" },
+      { "name": "The Flat-Panel Rule", "body": "Dark sections never use drop shadows. Depth comes only from white/5–white/10 fills and hairline borders.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do pair every Caution Yellow surface with #171717 ink text, never white (The Ink-on-Yellow Rule).",
+      "Do reuse the three-bar kicker glyph before any new section's eyebrow label.",
+      "Do keep dark-section depth to opacity fills and hairline borders — no drop shadows on #131313/#0c0c0c backgrounds.",
+      "Do keep every button and badge a pill; reserve smaller radii (12–24px) for containers only.",
+      "Do limit Anton to the Hero H1; use extrabold system sans for every other heading, however large."
+    ],
+    "donts": [
+      "Don't introduce a third accent color — the system's entire expressive range is Caution Yellow (go) and Alert Red (stakes) against black/white.",
+      "Don't add drop shadows to ordinary light-section content cards; they're border-only by design.",
+      "Don't treat the source.unsplash.com background photography in Frota.tsx as a real asset to imitate stylistically — per PRODUCT.md, it's a placeholder pending real fleet photography.",
+      "Don't ship a new form input without a real focus treatment; the current focus:outline-none with nothing replacing it is a known gap, not the intended pattern."
+    ]
+  }
+}
