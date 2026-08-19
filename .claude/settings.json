@@ -48,7 +48,11 @@
       "Bash(npx --yes playwright screenshot --viewport-size=320,3000 --full-page http://localhost:5175 verify-320-full.png)",
       "Bash(jobs -l)",
       "Bash(sips -g pixelHeight verify-320-full.png)",
-      "Bash(ffmpeg -y -loglevel error -i verify-320-full.png -vf \"crop=320:1500:0:8877\" footer-crop.png)"
+      "Bash(ffmpeg -y -loglevel error -i verify-320-full.png -vf \"crop=320:1500:0:8877\" footer-crop.png)",
+      "Bash(curl -sf http://localhost:5174/)",
+      "Bash(npx --yes playwright@1.62.1 install chromium --with-deps)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --window-size=1440,1600 --screenshot=\"/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/8e86d66a-d80b-440b-aaea-9c266573537f/scratchpad/top.png\" \"http://localhost:5173\")",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --window-size=1440,900 --run-all-compositor-stages-before-draw --virtual-time-budget=3000 --screenshot=/private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/8e86d66a-d80b-440b-aaea-9c266573537f/scratchpad/scrolled.png 'data:text/html,<script>location.href='\\\\''http://localhost:5173'\\\\''</script>')"
     ]
   }
 }

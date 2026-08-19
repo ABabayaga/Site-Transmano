@@ -1,3 +1,4 @@
+import Header from './components/Header'
 import Hero from './components/Hero'
 import QuemSomos from './components/QuemSomos'
 import Grupo from './components/Grupo'
@@ -17,6 +18,7 @@ function App() {
       >
         Pular para o conteúdo
       </a>
+      <Header />
       <main id="main-content">
         <Hero />
         <QuemSomos />

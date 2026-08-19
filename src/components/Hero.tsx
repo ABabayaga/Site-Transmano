@@ -1,4 +1,3 @@
-import Header from './Header'
 import Threads from './Threads'
 
 const trackingTabs = ['Remetente', 'Destinatário', 'Pagador']
@@ -13,7 +12,7 @@ function Icon({ id, className = '' }: { id: string; className?: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#f4f3ec] text-left font-[family-name:var(--sans)]">
+    <section id="hero" className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#f4f3ec] text-left font-[family-name:var(--sans)]">
       <div className="pointer-events-none absolute inset-0">
         {/* Threads fan from alert red into caution yellow across the bundle. */}
         <Threads
@@ -31,8 +30,6 @@ export default function Hero() {
           }}
         />
       </div>
-
-      <Header />
 
       <div className="relative mx-auto grid max-w-[1440px] grid-cols-[1.15fr_1fr] items-start gap-16 px-8 pt-36 pb-20 max-[1080px]:grid-cols-1 max-[1080px]:gap-12 max-[860px]:px-5 max-[860px]:py-12">
         <div>

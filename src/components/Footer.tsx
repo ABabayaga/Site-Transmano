@@ -1,3 +1,23 @@
+import gsap from 'gsap'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+
+gsap.registerPlugin(ScrollToPlugin)
+
+const HEADER_OFFSET = 96
+
+function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  if (!href.startsWith('#') || href.length < 2) return
+  const target = document.querySelector(href)
+  if (!target) return
+
+  event.preventDefault()
+  gsap.to(window, {
+    duration: 1.1,
+    scrollTo: { y: target, offsetY: HEADER_OFFSET },
+    ease: 'power2.inOut',
+  })
+}
+
 function Icon({ id, className = '' }: { id: string; className?: string }) {
   return (
     <svg className={`h-[15px] w-[15px] shrink-0 ${className}`} role="presentation" aria-hidden="true">
@@ -52,6 +72,7 @@ export default function Footer() {
                 <li key={link.label} className="list-none">
                   <a
                     href={link.href}
+                    onClick={(event) => scrollToSection(event, link.href)}
                     className="text-[14.5px] text-white/60 no-underline transition-colors hover:text-white max-[860px]:text-[13.5px]"
                   >
                     {link.label}

@@ -1,4 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+
+gsap.registerPlugin(ScrollToPlugin)
+
+const HEADER_OFFSET = 96
+
+function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  if (!href.startsWith('#') || href.length < 2) return
+  const target = document.querySelector(href)
+  if (!target) return
+
+  event.preventDefault()
+  gsap.to(window, {
+    duration: 1.1,
+    scrollTo: { y: target, offsetY: HEADER_OFFSET },
+    ease: 'power2.inOut',
+  })
+}
 
 const navLinks = [
   { label: 'Quem somos', href: '#quem-somos' },
@@ -20,10 +39,50 @@ function Icon({ id, className = '' }: { id: string; className?: string }) {
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isPastHero, setIsPastHero] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [topBarHeight, setTopBarHeight] = useState(0)
+  const topBarRef = useRef<HTMLDivElement>(null)
+  const hideTimeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined)
+
+  useEffect(() => {
+    const topBar = topBarRef.current
+    if (!topBar) return
+
+    const observer = new ResizeObserver(([entry]) => setTopBarHeight(entry.contentRect.height))
+    observer.observe(topBar)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    function handleScroll() {
+      const hero = document.getElementById('hero')
+      const pastHero = hero ? hero.getBoundingClientRect().bottom <= 0 : window.scrollY > 0
+
+      setIsPastHero(pastHero)
+
+      clearTimeout(hideTimeoutRef.current)
+
+      if (pastHero) {
+        setIsVisible(true)
+        hideTimeoutRef.current = setTimeout(() => setIsVisible(false), 900)
+      } else {
+        setIsVisible(true)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      clearTimeout(hideTimeoutRef.current)
+    }
+  }, [])
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 text-left font-[family-name:var(--sans)]">
-      <div className="bg-[#131313] text-white/85">
+    <header className="text-left font-[family-name:var(--sans)]">
+      <div ref={topBarRef} className="absolute inset-x-0 top-0 z-50 bg-[#131313] text-white/85">
         <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-6 px-8 py-1 text-[13px] max-[900px]:grid-cols-1 max-[860px]:px-5 max-[860px]:py-1">
           <div className="flex items-center justify-center gap-7 max-[900px]:hidden">
             <span className="flex items-center gap-2 whitespace-nowrap">
@@ -51,7 +110,12 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1440px] px-8 pt-3 pb-2 max-[860px]:px-4">
+      <div
+        style={{ top: isPastHero ? 0 : topBarHeight }}
+        className={`inset-x-0 z-40 mx-auto max-w-[1440px] px-8 pt-3 pb-2 transition-transform duration-300 ease-out max-[860px]:px-4 ${
+          isPastHero ? 'fixed' : 'absolute'
+        } ${isPastHero && !isVisible ? '-translate-y-[calc(100%+1rem)]' : 'translate-y-0'}`}
+      >
         <nav className="relative flex items-center justify-between gap-6 rounded-full border border-black/5 bg-[var(--bg)]/85 px-6 py-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.08)] backdrop-blur-md max-[860px]:px-4">
           <a href="#" className="flex shrink-0 items-center">
             <img src="/Logo-Transmano.png" alt="Transmano" className="h-11 w-auto" />
