@@ -35,7 +35,20 @@
       "WebSearch",
       "Bash(curl -sL \"https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/ts-tailwind/Backgrounds/DarkVeil/DarkVeil.tsx\" -o /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/4daaac4f-8946-48ec-ad0d-ec81a7a8349a/scratchpad/DarkVeil.tsx -w \"HTTP %{http_code}\\\\n\")",
       "Bash(curl -sL \"https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/ts-tailwind/Backgrounds/Threads/Threads.tsx\" -o /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/4daaac4f-8946-48ec-ad0d-ec81a7a8349a/scratchpad/Threads.tsx -w \"HTTP %{http_code}\\\\n\")",
-      "Bash(ffmpeg -i v-rm1.png -i v-rm2.png -filter_complex \"blend=all_mode=difference,signalstats,metadata=print:key=lavfi.signalstats.YAVG\" -frames:v 1 -f null -)"
+      "Bash(ffmpeg -i v-rm1.png -i v-rm2.png -filter_complex \"blend=all_mode=difference,signalstats,metadata=print:key=lavfi.signalstats.YAVG\" -frames:v 1 -f null -)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(npx --yes playwright screenshot --viewport-size=375,3000 --full-page http://localhost:5175 full-375.png)",
+      "Bash(npx --yes playwright screenshot --viewport-size=414,3000 --full-page http://localhost:5175 full-414.png)",
+      "Bash(npx --yes playwright screenshot --viewport-size=768,3000 --full-page http://localhost:5175 full-768.png)",
+      "Bash(npx --yes playwright screenshot --viewport-size=320,3000 --full-page http://localhost:5175 full-320.png)",
+      "Bash(sips -g pixelHeight -g pixelWidth full-375.png full-320.png full-768.png)",
+      "Bash(magick -version)",
+      "Bash(npx --yes playwright screenshot --viewport-size=320,900 http://localhost:5175 verify-320.png)",
+      "Bash(npx --yes playwright screenshot --viewport-size=768,900 http://localhost:5175 verify-768.png)",
+      "Bash(npx --yes playwright screenshot --viewport-size=320,3000 --full-page http://localhost:5175 verify-320-full.png)",
+      "Bash(jobs -l)",
+      "Bash(sips -g pixelHeight verify-320-full.png)",
+      "Bash(ffmpeg -y -loglevel error -i verify-320-full.png -vf \"crop=320:1500:0:8877\" footer-crop.png)"
     ]
   }
 }

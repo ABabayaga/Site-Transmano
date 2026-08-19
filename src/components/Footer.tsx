@@ -17,42 +17,42 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="relative left-1/2 w-screen -translate-x-1/2 bg-[#131313] text-left font-[family-name:var(--sans)]">
-      <div className="mx-auto max-w-[1340px] px-8 pt-8 pb-4 max-[860px]:px-5 max-[860px]:pt-8">
-        <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-8 max-[860px]:grid-cols-1 max-[860px]:gap-6">
+      <div className="mx-auto max-w-[1340px] px-8 pt-8 pb-4 max-[860px]:px-5 max-[860px]:pt-6 max-[860px]:pb-2">
+        <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-8 max-[860px]:grid-cols-1 max-[860px]:gap-4">
           <div>
-            <img src="/Logo-Transmano-branca.png" alt="Transmano" className="h-9 w-auto" />
-            <p className="mt-3 max-w-[320px] text-[14.5px] leading-[150%] text-white/60">
+            <img src="/Logo-Transmano-branca.png" alt="Transmano" className="h-9 w-auto max-[860px]:h-8" />
+            <p className="mt-3 max-w-[320px] text-[14.5px] leading-[150%] text-white/60 max-[860px]:mt-2 max-[860px]:text-[13.5px]">
               Transporte e logística rodoviária de cargas com foco em previsibilidade, segurança e
               excelência operacional. Uma empresa do Grupo Transmano.
             </p>
-            <div className="mt-3 flex items-center gap-3">
+            <div className="mt-3 flex items-center gap-3 max-[860px]:mt-2.5 max-[860px]:gap-2">
               <a
                 href="https://instagram.com/transmanotransportes"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white max-[860px]:h-8 max-[860px]:w-8"
               >
-                <Icon id="instagram-icon" className="h-[18px] w-[18px]" />
+                <Icon id="instagram-icon" className="h-[18px] w-[18px] max-[860px]:h-4 max-[860px]:w-4" />
               </a>
               <a
                 href="tel:+556700000000"
                 aria-label="Telefone"
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white max-[860px]:h-8 max-[860px]:w-8"
               >
-                <Icon id="phone-icon" className="h-[18px] w-[18px]" />
+                <Icon id="phone-icon" className="h-[18px] w-[18px] max-[860px]:h-4 max-[860px]:w-4" />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase">Navegação</h3>
-            <ul className="mt-3 flex flex-col gap-2 p-0">
+            <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase max-[860px]:text-[12px]">Navegação</h3>
+            <ul className="mt-3 flex flex-col gap-2 p-0 max-[860px]:mt-2 max-[860px]:gap-1.5">
               {navLinks.map((link) => (
                 <li key={link.label} className="list-none">
                   <a
                     href={link.href}
-                    className="text-[14.5px] text-white/60 no-underline transition-colors hover:text-white"
+                    className="text-[14.5px] text-white/60 no-underline transition-colors hover:text-white max-[860px]:text-[13.5px]"
                   >
                     {link.label}
                   </a>
@@ -62,20 +62,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase">
+            <h3 className="text-[13px] font-bold tracking-[0.3px] text-white uppercase max-[860px]:text-[12px]">
               Contato: Matriz
             </h3>
-            <ul className="mt-3 flex flex-col gap-2 p-0">
-              <li className="flex list-none items-start gap-2.5 text-[14.5px] leading-[150%] text-white/60">
+            <ul className="mt-3 flex flex-col gap-2 p-0 max-[860px]:mt-2 max-[860px]:gap-1.5">
+              <li className="flex list-none items-start gap-2.5 text-[14.5px] leading-[150%] text-white/60 max-[860px]:text-[13.5px]">
                 <Icon id="location-icon" className="mt-1 text-[#f5c518]" />
                 Av. Zilá Correa Machado, 2488, Km 8.8, Jardim Itamaracá, Campo Grande/MS · CEP
                 79062-000
               </li>
-              <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60">
+              <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60 max-[860px]:text-[13.5px]">
                 <Icon id="instagram-icon" className="text-[#f5c518]" />
                 @transmanotransportes
               </li>
-              <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60">
+              <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60 max-[860px]:text-[13.5px]">
                 <Icon id="shield-icon" className="text-[#f5c518]" />
                 CNPJ 34.229.529/0001-01
               </li>
@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/55 max-[860px]:mt-6">
+        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/55 max-[860px]:mt-4 max-[860px]:pt-3 max-[860px]:text-[11.5px] max-[640px]:pb-16">
           <span>© 2026 Grupo Transmano, Transporte e Logística. Todos os direitos reservados.</span>
           <span>Rastreamento integrado via SSW.</span>
         </div>
@@ -94,9 +94,9 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"
-        className="fixed right-8 bottom-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(0,0,0,0.3)] transition-transform hover:scale-105"
+        className="fixed right-8 bottom-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(0,0,0,0.3)] transition-transform hover:scale-105 max-[860px]:right-5 max-[860px]:bottom-5 max-[860px]:h-12 max-[860px]:w-12"
       >
-        <Icon id="whatsapp-icon" className="h-[26px] w-[26px]" />
+        <Icon id="whatsapp-icon" className="h-[26px] w-[26px] max-[860px]:h-5 max-[860px]:w-5" />
       </a>
     </footer>
   )

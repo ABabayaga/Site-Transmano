@@ -14,6 +14,18 @@
         "value": "20px",
         "createdAt": "2026-08-19T14:56:23.203Z",
         "reason": "project convention (CLAUDE.md): arbitrary Tailwind values used throughout, matches existing sibling sizes in Frota.tsx"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "58px",
+        "createdAt": "2026-08-19T16:41:00.864Z",
+        "reason": "matches this file's existing convention of arbitrary px sizes per project CLAUDE.md; hero H1 kept at a distinct display size"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "36px",
+        "createdAt": "2026-08-19T16:41:00.981Z",
+        "reason": "matches this file's existing convention of arbitrary px sizes per project CLAUDE.md; hero H1 mobile size"
       }
     ]
   }

@@ -90,7 +90,10 @@ export default function Grupo() {
         </div>
       </section>
 
-      <section className="relative left-1/2 w-screen -translate-x-1/2 bg-[#f5f5f7] text-left font-[family-name:var(--sans)]">
+      <section
+        id="responsabilidade"
+        className="relative left-1/2 w-screen -translate-x-1/2 bg-[#f5f5f7] text-left font-[family-name:var(--sans)]"
+      >
         <div className="mx-auto max-w-[1340px] px-8 py-12 max-[860px]:px-5 max-[860px]:py-14">
           <span className="flex items-center gap-2 text-[13px] font-bold tracking-[0.3px] text-[#e11d2e] uppercase">
             <span className="flex w-6 flex-col gap-[3px]" aria-hidden="true">
