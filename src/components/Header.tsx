@@ -23,7 +23,10 @@ export default function Header() {
         <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-6 px-8 py-1 text-[13px] max-[860px]:px-5 max-[860px]:py-1">
           <div className="flex items-center justify-center gap-7">
             <span className="flex items-center gap-2 whitespace-nowrap max-[640px]:hidden">
-              <span className="h-2 w-2 rounded-full bg-green-500 shadow-[0_0_0_3px_rgba(34,197,94,0.25)]" aria-hidden="true" />
+              <span className="relative flex h-2 w-2 shrink-0 items-center justify-center text-green-500" aria-hidden="true">
+                <span className="pulse-ring" />
+                <span className="relative h-2 w-2 rounded-full bg-green-500 shadow-[0_0_0_3px_rgba(34,197,94,0.25)]" />
+              </span>
               Monitoramento 24h em tempo real
             </span>
             <span className="flex items-center gap-2 whitespace-nowrap max-[640px]:hidden">

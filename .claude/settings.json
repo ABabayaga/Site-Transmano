@@ -26,7 +26,16 @@
       "Bash(curl -s \"http://localhost:5173/src/components/Grupo.tsx\")",
       "Bash(curl -sv \"http://localhost:5173/\")",
       "Bash(node inspect.mjs)",
-      "Bash(node shot.mjs)"
+      "Bash(node shot.mjs)",
+      "Skill(impeccable)",
+      "Skill(impeccable:*)",
+      "Bash(defaults read *)",
+      "Bash(ffmpeg -i frame-0.png -i frame-2.png -filter_complex \"blend=all_mode=difference\" diff.png -y)",
+      "Bash(ffmpeg -i frame-0.png -i frame-2.png -filter_complex \"blend=all_mode=difference\" -frames:v 1 diff.png -y)",
+      "WebSearch",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/ts-tailwind/Backgrounds/DarkVeil/DarkVeil.tsx\" -o /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/4daaac4f-8946-48ec-ad0d-ec81a7a8349a/scratchpad/DarkVeil.tsx -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/ts-tailwind/Backgrounds/Threads/Threads.tsx\" -o /private/tmp/claude-501/-Users-aleflima-Documents-Br7-transmano/4daaac4f-8946-48ec-ad0d-ec81a7a8349a/scratchpad/Threads.tsx -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(ffmpeg -i v-rm1.png -i v-rm2.png -filter_complex \"blend=all_mode=difference,signalstats,metadata=print:key=lavfi.signalstats.YAVG\" -frames:v 1 -f null -)"
     ]
   }
 }

@@ -114,3 +114,67 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* Motion: "The Live Signal" — a radar pulse used only where the page claims
+   a live, always-on operational state (24h monitoring, real-time tracking). */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: radar-pulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+/* Motion: the Hero's one authored arrival — badge, headline, copy, and CTAs
+   settle in on load, in reading order. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise-in {
+  animation: rise-in 640ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.rise-in-1 {
+  animation-delay: 60ms;
+}
+.rise-in-2 {
+  animation-delay: 160ms;
+}
+.rise-in-3 {
+  animation-delay: 260ms;
+}
+.rise-in-4 {
+  animation-delay: 360ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-ring {
+    animation: none;
+    display: none;
+  }
+  .rise-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

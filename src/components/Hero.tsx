@@ -1,3 +1,4 @@
+import Threads from './Threads'
 
 const trackingTabs = ['Remetente', 'Destinatário', 'Pagador']
 
@@ -11,36 +12,42 @@ function Icon({ id, className = '' }: { id: string; className?: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#fafafa] text-left font-[family-name:var(--sans)]">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 -right-32 h-[560px] w-[560px] rounded-full bg-[#f5c518]/35 blur-3xl" />
-        <div className="absolute -bottom-40 -left-32 h-[440px] w-[440px] rounded-full bg-[#e11d2e]/10 blur-3xl" />
+    <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#0c0c0c] text-left font-[family-name:var(--sans)]">
+      <div className="pointer-events-none absolute inset-0">
+        {/* Threads fan from alert red into caution yellow across the bundle. */}
+        <Threads
+          color={[0.882, 0.114, 0.18]}
+          colorB={[0.961, 0.773, 0.094]}
+          amplitude={0.45}
+          distance={0.12}
+        />
+        {/* Scrim: pooled behind the copy so the threads stay readable underneath it. */}
         <div
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(#00000014 1px, transparent 1px)',
-            backgroundSize: '18px 18px',
+            background:
+              'radial-gradient(ellipse 65% 60% at 20% 45%, rgba(12,12,12,0.7) 0%, rgba(12,12,12,0.3) 45%, rgba(12,12,12,0) 75%)',
           }}
         />
       </div>
 
       <div className="relative mx-auto grid max-w-[1440px] grid-cols-[1.15fr_1fr] items-start gap-16 px-8 py-20 max-[1080px]:grid-cols-1 max-[1080px]:gap-12 max-[860px]:px-5 max-[860px]:py-12">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
-           
+          <span className="rise-in rise-in-1 inline-flex items-center gap-2 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
+
             20 anos movendo o Centro-Oeste
           </span>
 
-          <h1 className="mt-6 font-['Anton'] text-[64px] leading-[0.98] font-normal tracking-[-0.5px] text-[var(--text-h)] uppercase max-[860px]:text-[38px]">
+          <h1 className="rise-in rise-in-2 mt-6 font-['Anton'] text-[64px] leading-[0.98] font-normal tracking-[-0.5px] text-white uppercase max-[860px]:text-[38px]">
             Sua carga com <span className="text-[#e11d2e]">previsibilidade,</span> não com sorte.
           </h1>
 
-          <p className="mt-6 max-w-[480px] text-[17px] leading-[150%] text-[var(--text)]">
+          <p className="rise-in rise-in-3 mt-6 max-w-[480px] text-[17px] leading-[150%] text-white/70">
             Transporte rodoviário com frota própria rastreada e monitorada 24 horas, com operações
             desenhadas para os setores que não podem parar.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="rise-in rise-in-4 mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#cotacao"
               className="flex items-center gap-2 rounded-full bg-[#f5c518] px-6 py-3.5 text-[13px] font-bold tracking-[0.3px] text-[#171717] uppercase no-underline transition-colors hover:bg-[#e0b30f]"
@@ -50,7 +57,7 @@ export default function Hero() {
             </a>
             <a
               href="#segmentos"
-              className="rounded-full border border-[var(--border)] px-6 py-3.5 text-[13px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase no-underline transition-colors hover:border-[var(--text-h)]"
+              className="rounded-full border border-white/25 px-6 py-3.5 text-[13px] font-bold tracking-[0.3px] text-white uppercase no-underline transition-colors hover:border-white"
             >
               Ver segmentos
             </a>
@@ -61,8 +68,9 @@ export default function Hero() {
         {/* Mockup only — will be wired to the SSW tracking API */}
         <div className="relative w-full max-w-[420px] justify-self-end overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] max-[1080px]:justify-self-start">
           <div className="flex items-center gap-3 bg-[#131313] px-6 py-4">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e11d2e]">
-              <Icon id="search-icon" className="h-4 w-4 text-white" />
+            <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e11d2e] text-[#e11d2e]">
+              <span className="pulse-ring rounded-xl" />
+              <Icon id="search-icon" className="relative h-4 w-4 text-white" />
             </span>
             <div>
               <div className="text-[14px] font-bold tracking-[0.3px] text-white uppercase">
