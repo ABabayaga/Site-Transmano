@@ -20,13 +20,13 @@ export default function QuemSomos() {
       >
         <div className="gsap-reveal relative overflow-hidden rounded-3xl">
           <img
-            src="/quem.jpg"
+            src="/ms.jpeg"
             alt="Caminhão do Grupo Transmano em rodovia"
             className="h-full max-h-[520px] w-full object-cover"
           />
-          <span className="absolute bottom-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
+        {/*   <span className="absolute bottom-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
             Campo Grande · MS
-          </span>
+          </span> */}
         </div>
 
         <div className="gsap-reveal">

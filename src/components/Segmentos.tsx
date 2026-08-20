@@ -11,7 +11,7 @@ function Icon({ id, className = '' }: { id: string; className?: string }) {
 const segmentos = [
   {
     tag: 'Setor alimentício',
-    image: '/segali.jpg',
+    image: '/food.jpeg',
     title: 'Transporte de alimentos',
     description:
       'No abastecimento, o relógio não para: janela de recebimento fechada, CD sem espaço amanhã, promotor esperando na loja. Nossa operação já nasce nesse ritmo.',
@@ -81,9 +81,9 @@ export default function Segmentos() {
                   alt={segmento.title}
                   className="h-[220px] w-full object-cover"
                 />
-                <span className="absolute top-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
+               {/*  <span className="absolute top-5 left-5 rounded-full bg-[#f5c518] px-4 py-2 text-[12.5px] font-bold tracking-[0.3px] text-[#171717] uppercase">
                   {segmento.tag}
-                </span>
+                </span> */}
               </div>
 
               <div className="pt-5">
