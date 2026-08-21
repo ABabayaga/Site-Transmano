@@ -1,0 +1,1 @@
+Before considering a coding task done: run `npm run lint` and `npm run build` (build includes `tsc -b` typecheck). No test suite exists, so no test command to run.

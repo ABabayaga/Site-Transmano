@@ -43,6 +43,11 @@ Each file in `src/components/` is a self-contained, default-exported section com
 - `src/App.css` is unmodified boilerplate left over from the Vite React template (`.counter`, `.hero .base/.framework/.vite` spinning-logo classes) — none of it is used by the current markup. Don't treat it as a source of active styling conventions.
 - `#root` in `index.css` still has the template's constrained/centered layout (`width: 1126px`, `border-inline`, `text-align: center`); full-bleed sections deliberately escape this via the pattern described above.
 
+### Animation & background effects
+
+- **Scroll reveal**: `src/hooks/useScrollReveal.ts` wraps GSAP + ScrollTrigger into a reusable hook — pass a CSS selector (scoped to the returned ref) to fade/slide-in matching children once they scroll into view. Used by `Grupo`, `Frota`, `QuemSomos`, `Segmentos`, and `ServicosPrestados`; reach for this hook rather than writing new GSAP timelines for scroll-triggered entrance animations.
+- **`Threads.tsx`**: an OGL (WebGL) animated line-background component, currently used only in `Hero.tsx`. It's self-contained (own shaders, own render loop) — treat it as a black-box visual effect, not a pattern to replicate per-section.
+
 ### Integration notes
 
 - `Hero.tsx`'s tracking widget is a **static mockup** (explicitly commented as such in the source) — the "Rastreie sua carga" form is not wired to any backend yet. It's intended to integrate with an SSW tracking API.

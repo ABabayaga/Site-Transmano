@@ -26,6 +26,42 @@
         "value": "36px",
         "createdAt": "2026-08-19T16:41:00.981Z",
         "reason": "matches this file's existing convention of arbitrary px sizes per project CLAUDE.md; hero H1 mobile size"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "72px",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-08-21T14:47:12.416Z",
+        "reason": "standalone static 404 page outside React design system; giant display numeral, not body/heading type"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "18px",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-08-21T14:47:12.445Z",
+        "reason": "standalone static 404 page outside React design system; bespoke h1 size for this one-off page"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "15px",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-08-21T14:47:12.473Z",
+        "reason": "within documented Body range (15-17px) per DESIGN.md; false positive since page is outside the scanned component set"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-08-21T14:47:12.500Z",
+        "reason": "standalone static 404 page outside React design system; bespoke button label size for this one-off page"
       }
     ]
   }
