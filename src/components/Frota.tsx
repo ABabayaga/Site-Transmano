@@ -40,7 +40,7 @@ export default function Frota() {
       <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-black text-left font-[family-name:var(--sans)]">
         <div className="pointer-events-none absolute inset-0">
           <img
-            src="/padrao.jpeg"
+            src="/padrao.webp"
             alt=""
             className="h-full w-full object-cover opacity-100"
           />
@@ -85,7 +85,7 @@ export default function Frota() {
       >
         <div className="absolute inset-0">
           <img
-            src="/frota.jpeg"
+            src="/frota.webp"
             alt=""
             className="h-full w-full object-cover opacity-100"
           />

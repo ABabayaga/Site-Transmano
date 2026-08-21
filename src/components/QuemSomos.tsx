@@ -20,7 +20,7 @@ export default function QuemSomos() {
       >
         <div className="gsap-reveal relative overflow-hidden rounded-3xl">
           <img
-            src="/ms.jpeg"
+            src="/ms.webp"
             alt="Caminhão do Grupo Transmano em rodovia"
             className="h-full max-h-[520px] w-full object-cover"
           />

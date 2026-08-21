@@ -11,7 +11,7 @@ function Icon({ id, className = '' }: { id: string; className?: string }) {
 const segmentos = [
   {
     tag: 'Setor alimentício',
-    image: '/food.jpeg',
+    image: '/food.webp',
     title: 'Transporte de alimentos',
     description:
       'No abastecimento, o relógio não para: janela de recebimento fechada, CD sem espaço amanhã, promotor esperando na loja. Nossa operação já nasce nesse ritmo.',
@@ -26,7 +26,7 @@ const segmentos = [
   },
   {
     tag: 'Placas solares',
-    image: 'segsol.jpg',
+    image: 'segsol.webp',
     title: 'Painéis fotovoltaicos',
     description:
       'Painel solar não é carga comum. A avaria nem sempre aparece na entrega. Muitas vezes só aparece depois, com os módulos já instalados e gerando abaixo do esperado. Aí a conta chega dobrada.',
