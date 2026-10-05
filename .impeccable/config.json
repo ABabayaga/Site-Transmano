@@ -62,6 +62,18 @@
         ],
         "createdAt": "2026-08-21T14:47:12.500Z",
         "reason": "standalone static 404 page outside React design system; bespoke button label size for this one-off page"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "11.5px",
+        "createdAt": "2026-10-05T17:34:01.350Z",
+        "reason": "Claude: pre-existing size in Hero.tsx tracking mockup helper text, carried over unchanged"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "createdAt": "2026-10-05T18:14:51.029Z",
+        "reason": "Claude: tracking card header title already uses 14px in Hero.tsx; results dialog header mirrors it"
       }
     ]
   }
