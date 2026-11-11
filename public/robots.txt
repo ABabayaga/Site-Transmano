@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://site-transmano-red.vercel.app/sitemap.xml
+Sitemap: https://www.transmano.com.br/sitemap.xml

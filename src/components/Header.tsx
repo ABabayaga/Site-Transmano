@@ -1,23 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-
-gsap.registerPlugin(ScrollToPlugin)
-
-/* const HEADER_OFFSET = 96 */
-
-/* function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
-  if (!href.startsWith('#') || href.length < 2) return
-  const target = document.querySelector(href)
-  if (!target) return
-
-  event.preventDefault()
-  gsap.to(window, {
-    duration: 1.1,
-    scrollTo: { y: target, offsetY: HEADER_OFFSET },
-    ease: 'power2.inOut',
-  })
-} */
+import { scrollToSection } from '../utils/scrollToSection'
 
 const navLinks = [
   { label: 'Quem somos', href: '#quem-somos' },
@@ -98,7 +80,7 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center justify-center gap-7 max-[480px]:gap-3">
-            <a href="#rastrear-carga" className="flex items-center gap-2 whitespace-nowrap text-inherit no-underline transition-colors hover:text-white">
+            <a href="#rastrear-carga" onClick={(event) => scrollToSection(event, '#rastrear-carga')} className="flex items-center gap-2 whitespace-nowrap text-inherit no-underline transition-colors hover:text-white">
               <Icon id="search-icon" className="text-white/55" />
               Rastrear carga
             </a>
@@ -117,7 +99,7 @@ export default function Header() {
         } ${isPastHero && !isVisible ? '-translate-y-[calc(100%+1rem)]' : 'translate-y-0'}`}
       >
         <nav className="relative flex items-center justify-between gap-6 rounded-full border border-black/5 bg-[var(--bg)]/85 px-6 py-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.08)] backdrop-blur-md max-[860px]:px-4">
-          <a href="#" className="flex shrink-0 items-center">
+          <a href="#" onClick={(event) => scrollToSection(event, '#')} className="flex shrink-0 items-center">
             <img src="/Logo-Transmano.png" alt="Transmano" className="h-11 w-auto" />
           </a>
 
@@ -126,6 +108,7 @@ export default function Header() {
               <li key={label} className="list-none">
                 <a
                   href={href}
+                  onClick={(event) => scrollToSection(event, href)}
                   className="group relative inline-flex items-center py-1 text-[13.5px] whitespace-nowrap font-bold tracking-[0.3px] text-[var(--text-h)] uppercase no-underline transition-colors hover:text-[#e11d2e]"
                 >
                   {label}
@@ -183,7 +166,10 @@ export default function Header() {
               <li key={label} className="list-none">
                 <a
                   href={href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(event) => {
+                    setMenuOpen(false)
+                    scrollToSection(event, href)
+                  }}
                   className="block rounded-full px-4 py-2.5 text-[13.5px] font-bold tracking-[0.3px] text-[var(--text-h)] uppercase no-underline transition-colors hover:bg-black/[0.03] hover:text-[#e11d2e]"
                 >
                   {label}

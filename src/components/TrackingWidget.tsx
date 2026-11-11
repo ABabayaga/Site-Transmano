@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 
 // "Novo rastreamento" on SSW's result page links back here.
-const RETURN_URL = 'https://site-transmano-red.vercel.app/#hero'
+const RETURN_URL = 'https://www.transmano.com.br/#hero'
 
 type Perfil = 'remetente' | 'destinatario' | 'pagador'
 type Modo = 'nfs' | 'senha'

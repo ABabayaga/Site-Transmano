@@ -1,22 +1,4 @@
-import gsap from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-
-gsap.registerPlugin(ScrollToPlugin)
-
-const HEADER_OFFSET = 96
-
-function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
-  if (!href.startsWith('#') || href.length < 2) return
-  const target = document.querySelector(href)
-  if (!target) return
-
-  event.preventDefault()
-  gsap.to(window, {
-    duration: 1.1,
-    scrollTo: { y: target, offsetY: HEADER_OFFSET },
-    ease: 'power2.inOut',
-  })
-}
+import { scrollToSection } from '../utils/scrollToSection'
 
 function Icon({ id, className = '' }: { id: string; className?: string }) {
   return (
@@ -36,7 +18,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative left-1/2 w-screen -translate-x-1/2 bg-[#131313] text-left font-[family-name:var(--sans)]">
+    <footer id="contato" className="relative left-1/2 w-screen -translate-x-1/2 bg-[#131313] text-left font-[family-name:var(--sans)]">
       <div className="mx-auto max-w-[1340px] px-8 pt-8 pb-4 max-[860px]:px-5 max-[860px]:pt-6 max-[860px]:pb-2">
         <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-8 max-[860px]:grid-cols-1 max-[860px]:gap-4">
           <div>
@@ -45,6 +27,7 @@ export default function Footer() {
               Transporte e logística rodoviária de cargas com foco em previsibilidade, segurança e
               excelência operacional. Uma empresa do Grupo Transmano.
             </p>
+            {/* Botões Instagram / Telefone — desativados
             <div className="mt-3 flex items-center gap-3 max-[860px]:mt-2.5 max-[860px]:gap-2">
               <a
                 href="https://instagram.com/transmanotransportes"
@@ -62,7 +45,7 @@ export default function Footer() {
               >
                 <Icon id="phone-icon" className="h-[18px] w-[18px] max-[860px]:h-4 max-[860px]:w-4" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -92,9 +75,16 @@ export default function Footer() {
                 Av. Zilá Correa Machado, 2488, Km 8.8, Jardim Itamaracá, Campo Grande/MS · CEP
                 79062-000
               </li>
-              <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60 max-[860px]:text-[13.5px]">
-                <Icon id="instagram-icon" className="text-[#f5c518]" />
-                @transmanotransportes
+              <li className="list-none text-[14.5px] max-[860px]:text-[13.5px]">
+                <a
+                  href="https://instagram.com/transmanotransportes"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2.5 text-white/60 no-underline transition-colors hover:text-white"
+                >
+                  <Icon id="instagram-icon" className="text-[#f5c518]" />
+                  @transmanotransportes
+                </a>
               </li>
               <li className="flex list-none items-center gap-2.5 text-[14.5px] text-white/60 max-[860px]:text-[13.5px]">
                 <Icon id="shield-icon" className="text-[#f5c518]" />
@@ -125,6 +115,7 @@ export default function Footer() {
         </p>
       </div>
 
+      {/* Botão flutuante do WhatsApp — desativado
       <a
         href="https://wa.me/556700000000"
         target="_blank"
@@ -133,7 +124,7 @@ export default function Footer() {
         className="fixed right-8 bottom-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(0,0,0,0.3)] transition-transform hover:scale-105 max-[860px]:right-5 max-[860px]:bottom-5 max-[860px]:h-12 max-[860px]:w-12"
       >
         <Icon id="whatsapp-icon" className="h-[26px] w-[26px] max-[860px]:h-5 max-[860px]:w-5" />
-      </a>
+      </a> */}
     </footer>
   )
 }

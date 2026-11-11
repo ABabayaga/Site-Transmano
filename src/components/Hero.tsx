@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         {/* Tracking card — posts to SSW's public tracking forms (see TrackingWidget) */}
-        <div className="relative mr-16 w-full max-w-[420px] justify-self-end overflow-hidden rounded-3xl border border-[#131313]/10 bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.18)] max-[1080px]:mr-0 max-[1080px]:justify-self-start">
+        <div id="rastrear-carga" className="relative mr-16 w-full max-w-[420px] justify-self-end overflow-hidden rounded-3xl border border-[#131313]/10 bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.18)] max-[1080px]:mr-0 max-[1080px]:justify-self-start">
           <div className="flex items-center gap-3 bg-[#131313] px-6 py-3">
             <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e11d2e] text-[#e11d2e]">
               <span className="pulse-ring rounded-xl" />
