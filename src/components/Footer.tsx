@@ -104,10 +104,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/55 max-[860px]:mt-4 max-[860px]:pt-3 max-[860px]:text-[11.5px] max-[640px]:pb-16">
+        <div className="mt-6 flex flex-col items-center justify-center gap-1 border-t border-white/10 pt-4 text-center text-[13px] text-white/55 max-[860px]:mt-4 max-[860px]:pt-3 max-[860px]:text-[11.5px]">
           <span>© 2026 Grupo Transmano, Transporte e Logística. Todos os direitos reservados.</span>
           <span>Rastreamento integrado via SSW.</span>
         </div>
+      </div>
+
+      <div className="border-t border-white/5 bg-[#0b0b0b] py-3 max-[640px]:pb-16">
+        <p className="mx-auto max-w-[1340px] px-8 text-center text-[12px] text-white/40 max-[860px]:px-5 max-[860px]:text-[11px]">
+          Desenvolvido por{' '}
+          <a
+            href="https://www.agenciabr7.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 no-underline underline-offset-4 transition-colors hover:text-[#00A1A5] hover:underline"
+          >
+            BR7 Marketing
+          </a>{' '}
+          · Marketing em Movimento
+        </p>
       </div>
 
       <a
